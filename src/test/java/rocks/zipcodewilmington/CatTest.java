@@ -57,6 +57,7 @@ public class CatTest {
         Assert.assertEquals("Azula", namePassedIn);
 
     }
+
     @Test
     public void  setNameTest2() {
         // Given (cat data)
@@ -77,12 +78,10 @@ public class CatTest {
     public void  setBirthDateTest1() {
         // Given (cat data)
         String givenName = "Zula";
-        Date givenBirthDate = new Date();
         Date newBirthdate = new Date();
-        Integer givenId = 0;
 
         // When (a cat is constructed)
-        Cat cat1 = new Cat(givenName, givenBirthDate, givenId);
+        Cat cat1 = new Cat(givenName);
         cat1.setBirthDate(newBirthdate);
         Date retrievedBirthDate = cat1.getBirthDate();
 
